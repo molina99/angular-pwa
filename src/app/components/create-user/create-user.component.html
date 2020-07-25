@@ -1,0 +1,57 @@
+<app-header></app-header>
+<div>
+  <form class="w-full mx-auto max-w-3xl bg-white shadow p-8 text-gray-700 ">
+    <h2 class="w-full my-2 text-3xl font-bold leading-tight my-5">Registro de usuario</h2>
+    <div class="flex flex-wrap mb-6">
+      <div class="relative w-full appearance-none label-floating">
+        <label class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+          Nombres:
+        </label>
+        <input
+          class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+          name="names" type="text" placeholder="Ej: Jose Luis" [(ngModel)]="user.names" required>
+      </div>
+    </div>
+    <div class="flex flex-wrap mb-6">
+      <div class="relative w-full appearance-none label-floating">
+        <label
+          class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+          Apellidos
+        </label>
+        <input
+          class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+          name="lastNames" type="text" placeholder="Ej: Molina Cañar" [(ngModel)]="user.lastNames" required>
+      </div>
+    </div>
+    <div class="flex flex-wrap mb-6">
+      <div class="relative w-full appearance-none label-floating">
+        <label
+          class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+          Correo electrónico
+        </label>
+        <input
+          class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+          name="email" type="email" placeholder="Ej: jose@gmail.com" [(ngModel)]="user.email" required>
+      </div>
+    </div>
+    <div class="flex flex-wrap mb-6">
+      <div class="relative w-full appearance-none label-floating">
+        <label
+          class="absolute tracking-wide py-2 px-4 mb-4 opacity-0 leading-tight block top-0 left-0 cursor-text">
+          Contraseña
+        </label>
+        <input
+          class="tracking-wide py-2 px-4 mb-3 leading-relaxed appearance-none block w-full bg-gray-200 border border-gray-200 rounded focus:outline-none focus:bg-white focus:border-gray-500"
+          name="password" type="password" placeholder="********" [(ngModel)]="user.password" required>
+      </div>
+    </div>
+
+    <div>
+      <button (click)="postUser()"
+              class="w-full shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
+        Enviar
+      </button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>
